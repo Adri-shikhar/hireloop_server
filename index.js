@@ -40,7 +40,7 @@ function stripClientId(body) {
 
 async function run() {
   try {
-    await client.connect();
+   
     const db = client.db("Hireloop");
     const jobsCollection = db.collection("jobs");
     const companiesCollection = db.collection("companies");
@@ -175,7 +175,7 @@ async function run() {
       }
     });
 
-    await client.db("admin").command({ ping: 1 });
+  
     console.log("Connected to MongoDB!");
   } catch (error) {
     console.error("Database connection error:", error);
